@@ -16,7 +16,7 @@ nearby_devices = bluetooth.discover_devices(lookup_names=True)
 
 for bdaddr, name in nearby_devices:
     print("Found %s - %s" % (bdaddr, name))
-    if target_name == bluetooth.lookup_name(bdaddr):
+    if target_name == name:
         target_addresses.append(bdaddr)
 
 if target_addresses:
